@@ -1,8 +1,8 @@
-- name:demopalybook
-  hosts:all
-    
+- name: demo palybook
+  host:
+    task:
     - name: print hello world
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg:hello world
 
 
