@@ -1,10 +1,15 @@
-- name: demo playbook
-  hosts: all
-  task:
-    name: print hello world
-    ansible.builtin.debug:
-      mgs: hello world
+#- name: demo playbook
+ # hosts: all
+  #task:
+   # name: print hello world
+    #ansible.builtin.debug:
+     # mgs: hello world
 
+ - module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+   name = "test"
+    instance_type          = "t2.micro"
+    key_name               = "user1"
 
 
 
